@@ -1,0 +1,24 @@
+select {
+    width: 100%;
+}
+.hide{
+    display: none;
+}
+.genric-btn{
+    margin-top: 20px;
+}
+.registerEnd{
+    margin: 108px;
+    text-align: center;
+    border: 1px solid;
+    padding: 3pc;
+    font-size: 21px;
+    font-weight: 500;
+    background: #fab700;
+    border-color: #fab700;
+    color: white;
+}
+/* .whole-wrap{
+    margin-top: 100px;
+    margin-bottom: 100px;
+} */

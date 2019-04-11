@@ -1,0 +1,96 @@
+<div class="section-top-border">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="mb-30">Notification</h3>
+            <form [formGroup]="notificationFormGroup">
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>Notification</p>
+                    <div class="primary-switch">
+                        <input type="checkbox" id="default-switch" formControlName="notificationStatus">
+                        <label for="default-switch"></label>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <div class="col-md-2">
+                        <p>Start Time</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="field-wrap">
+                            <input type="time" name="time" formControlName="starttime" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <p>End Time</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="field-wrap">
+                            <input type="time" name="time" formControlName="endtime" />
+                        </div>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>WEEKDAYS</p>
+                    <div class="">
+                        <input type="checkbox" id="primary-checkbox" formControlName="weekdays" value="weekdays" id="weekdays">
+                        <label for="primary-checkbox"></label>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>SATURDAY</p>
+                    <div class="">
+                        <input type="checkbox" id="primary-checkbox" formControlName="saturday" value="saturday" id="saturday">
+                        <label for="primary-checkbox"></label>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>SUNDAY</p>
+                    <div class="">
+                        <input type="checkbox" id="primary-checkbox" formControlName="sunday" value="sunday" id="sunday">
+                        <label for="primary-checkbox"></label>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>ALL</p>
+                    <div class="">
+                        <input type="checkbox" id="primary-checkbox" formControlName="all" value="all" id="all">
+                        <label for="primary-checkbox"></label>
+                    </div>
+                </div>
+                <h3 class="mb-20">Service Area</h3>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>By Pincode</p>
+                    <div class="primary-radio">
+                        <input type="radio" id="primary-radio" name="serviceArea" formControlName="serviceArea" checked>
+                        <label for="primary-radio"></label>
+                    </div>
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                    <p>By Area</p>
+                    <div class="primary-radio">
+                        <input type="radio" id="primary-radio" name="serviceArea" formControlName="serviceArea">
+                        <label for="primary-radio"></label>
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <form [formGroup]="myForm">
+                        <ng-multiselect-dropdown name="city" [placeholder]="'Select City'" [data]="cities" formControlName="city" [disabled]="disabled"
+                            [settings]="dropdownSettings" (onSelect)="onItemSelect($event)">
+                        </ng-multiselect-dropdown>
+                    </form>
+                </div>
+                <a class="genric-btn primary pull-right" (click)="submit()">Next</a>
+            </form>
+        </div>
+        <div class="col-md-1">
+            <div id="verticle-line"></div>
+        </div>
+
+        <div class="col-md-5">
+            <div id="rightPanel">
+                <div class="field-wrap regimage">
+                    <img src="../../assets/img/alert.png" style="width:100%;height:400px">
+                </div>
+            </div>
+        </div>
+
+    </div>

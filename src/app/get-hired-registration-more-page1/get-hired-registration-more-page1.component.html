@@ -1,0 +1,47 @@
+<div class="section-top-border">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="mb-30">Skill</h3>
+            <form [formGroup]="skillFormGroup">
+                <div class="input-group-icon mt-10">
+                    <div class="form-select" id="default-select">
+                        <select formControlName="serviceProviderType" id="serviceProviderType" (change)="setSkill($event.target.value)">
+                            <option disabled [selected]='true'>Select Service Provider Type</option>
+                            <option value="INL">Individual Helper (Non-Licensed)</option>
+                            <option value="IL">Indivudual Helper (Licensed)</option>
+                            <option value="P">Professional Helper (Company)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-10" *ngIf="showLicense">
+                    <input type="text" name="license_number" placeholder="License Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'License Number'"
+                        required class="single-input" formControlName="license">
+                </div>
+
+                <div class="input-group-icon mt-10">
+                    <div class="form-select" id="default-select">
+                        <select formControlName="skillLevel" id="skillLevel">
+                            <option disabled [selected]='true'>Select Skill Type</option>
+                            <option value="H">Highly Skilled</option>
+                            <option value="M">Medium Skilled</option>
+                            <option value="L">Can Handle</option>
+                        </select>
+                    </div>
+                </div>
+                <a class="genric-btn primary pull-right" (click)="submit()">Next</a>
+            </form>
+        </div>
+        <div class="col-md-1">
+            <div id="verticle-line"></div>
+        </div>
+
+        <div class="col-md-5">
+            <div id="rightPanel">
+                <div class="field-wrap regimage">
+                    <img src="../../assets/img/skill.png" style="width:100%;height:400px">
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,48 @@
+<div class="section-top-border">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="mb-30">Reason</h3>
+      <form [formGroup]="hiringFormGroup">
+        <div class="input-group-icon mt-10">
+            <app-avatar-upload></app-avatar-upload>
+        </div>
+        <div class="mt-10">
+          <textarea class="single-textarea" formControlName="hireReason" placeholder="Why will you be hired?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Why will you be hired'"
+            required></textarea>
+        </div>
+        <div class="mt-10">
+          <textarea class="single-textarea" formControlName="introduction" placeholder="Introduction" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduction'"
+            required></textarea>
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="Past Customer 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Year Founded'"
+            required class="single-input" formControlName="customer1">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="Past Customer 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Year Founded'"
+            required class="single-input" formControlName="customer2">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="Past Customer 3" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Year Founded'"
+            required class="single-input" formControlName="customer3">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="Past Customer 4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Year Founded'"
+            required class="single-input" formControlName="customer4">
+        </div>
+        <a  class="genric-btn primary pull-right" (click)="submit()">Next</a>
+      </form>
+    </div>
+    <div class="col-md-1">
+        <div id="verticle-line"></div>
+    </div>
+
+    <div class="col-md-5">
+        <div id="rightPanel">
+            <div class="field-wrap regimage" >
+                <img src="../../assets/img/hirewhy.jpg" style="width:100%;height:400px">
+            </div>
+        </div>
+    </div>
+
+  </div>

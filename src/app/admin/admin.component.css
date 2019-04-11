@@ -1,0 +1,21 @@
+.service ul li{
+    background: beige;
+    padding: 7px;
+    color: black;
+    font-weight: 500;
+    width: 50%;
+    margin: 5px;
+}
+.heading{
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    background: #e6054e;
+    color: #fbfbfb;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.add{
+    margin-bottom: 200px;
+}

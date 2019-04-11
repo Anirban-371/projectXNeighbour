@@ -1,0 +1,100 @@
+  .title{
+    font-weight: 500;
+    color: black;
+  }
+  .location{
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .result-row {
+    padding-bottom: 150px;
+  }
+  .result-row .detail-container{
+    border: 1px solid #eae6e6;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fab700;
+  }
+  .result-row .col-md-3{
+    padding: 0;
+  }
+  .result-row .col-md-9{
+    left: 10px;
+  }
+  hr{
+      color: black;
+  }
+  .primary-switch{
+    float: right;
+    top: 12px;
+  }
+  #verticle-line {
+    margin-top: 12px;
+    width: 1px;
+    min-height: 450px;
+    background: #fab700;
+}
+.section-top-border {
+   padding-top: 0px;
+}
+span#intro {
+  font-size: 10px;
+  font-weight: 100px;
+  color: black;
+}
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.col-md-3 span , .col-md-4 span {
+  cursor: pointer;
+}
+.result-row{
+  padding-top: 20px;
+}
+
+.result-row .property{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.rating{
+  text-align: center;
+  top: 21px;
+}
+.rating span{
+  text-align: center;
+  top: 21px;
+  color: #fab700;
+}
+.fa-arrow-circle-right{
+  font-size: 16px;
+  margin-left: 10px;
+}
+.fa-check-circle{
+font-size: 16px;
+color: green;
+margin-right: 10px;
+}
+.project h5, .type h5, .satisfaction{
+  float:  right;
+}
+.panel-footer {
+  padding-bottom: 50px;
+  color: black;
+}
+
+.genric-btn{
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.fa-thumbs-up,.fa-thumbs-down{
+  font-size: 16px;
+  margin-left: 10px;
+  color: green;
+}

@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6">
+      <p class="heading">Tell us when do want the service?</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 time-inputs">
+      <p>Select the month</p>
+      <div class="row">
+        <div class="month-check" *ngFor="let month of months;let i=index " >
+            <label for="switch-{{i}}" class="box-select">{{month}}</label>
+            <input type="radio" name="months" class="default-switch" id="switch-{{i}}" (click)="getdays(month)">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 time-inputs">
+        <p>Select the Day</p>
+        <div class="row">
+          <div class="month-check" *ngFor="let day of days;let i=index ">
+              <label for="switch-{{i}}" class="box-select">{{day}}</label>
+              <input type="radio" name="days" class="default-switch" id="switch-{{i}}">
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+      <div id="time-range">
+          <p>Time : <span class="slider-time">9:00 AM</span> 
+      
+          </p>
+          <div class="sliders_step1">
+              <div id="slider-range"></div>
+          </div>
+      </div>
+  </div>
+  <div class="row next-button">
+    <a href="javascript:void(0)" class="genric-btn success" id="estimate">GET ESTIMATE</a>
+    <a href="javascript:void(0)" class="genric-btn success" (click)="next()">DONE</a>
+  </div>

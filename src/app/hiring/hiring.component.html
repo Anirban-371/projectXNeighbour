@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <p class="point" [class.active]="page == 'location'">Service Location</p>
+    <hr />
+    <p class="point" [class.active]="page == 'service'">Service Time</p>
+    <hr />
+    <p class="point" [class.active]="page == 'book'">Book Service</p>
+  </div>
+  <div [class.hide] = "page != 'location'">
+    <app-hire-location></app-hire-location>
+  </div>
+  <div [class.hide] = "page != 'service'">
+    <app-hire-time></app-hire-time>
+  </div>
+  <div [class.hide] = "page != 'book'">
+    <app-hire-result></app-hire-result>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+#home{
+    margin-bottom: 10px;
+}
+#logo h2{
+    color: #fab700;
+}
+nav#nav-menu-container ul li a {
+    font-size: initial;
+}
+#signin a{
+    background-color: #fab700;
+}
+#signup a{
+    background-color: red;
+    color: white;
+}
+#nav-menu-container{
+    margin-left: 500px;
+}
+.welcome{
+    background: transparent;
+    border: 0;
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fab700;
+}
+.dropdown-menu{
+    margin-top: 2px;
+}
+.dropdown-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    margin: 7px;
+    cursor: pointer;
+}

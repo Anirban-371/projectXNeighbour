@@ -1,0 +1,35 @@
+hr{
+    width: 100px;
+    margin: 10px;
+}
+.point{
+    border: 1px solid;
+    padding: 2px;
+    width: 182px;
+    text-align: center;
+}
+.container .row{
+    padding-top: 25px;
+}
+.panel-group{
+    width: 100%;
+}
+.panel-heading{
+    height: 90px;
+    background-color: white;
+}
+.panel-footer {
+    height: 60px;
+}
+.panel-footer a {
+    margin-left: 10px;
+}
+.panel-heading img{
+    height: 67px;
+    width: 100px;
+}
+p.point.active {
+    background-color: #fab700;
+    color: white;
+    border: 1px solid black;
+}

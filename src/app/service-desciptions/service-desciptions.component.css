@@ -1,0 +1,17 @@
+.single-service button{
+    background-color: #fab700;
+    border: 0px;
+    border-radius: 0px;
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 14px;
+}
+@media only screen and (max-width: 400px)  {
+    .project-title{
+        font-size: 24px;
+        padding-bottom: 17px;
+    }
+}
+.single-service .thumb{
+    margin-top: 10PX
+}

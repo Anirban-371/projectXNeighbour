@@ -1,0 +1,115 @@
+.col-md-3 label,.col-md-4 label {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 10px;
+}
+.col-md-3 span , .col-md-4 span {
+    color: black;
+    font-weight: 400;
+    margin: 10px;
+    cursor: pointer;
+}
+.panel-group{
+    width: 100%;
+}
+
+.panel-heading{
+    height: 90px;
+    background-color: white;
+}
+.panel-footer {
+    height: 60px;
+}
+.panel-footer a {
+    margin-left: 10px;
+}
+.panel-heading img{
+    height: 67px;
+    width: 100px;
+}
+span#intro {
+    font-size: 12px;
+    margin-left: 10px;
+    font-style: italic;
+    font-weight: 100px;
+    color: #1fa9ff;
+}
+.checked {
+    color: orange;
+}
+.rating{
+    float: left;
+}
+.project{
+    float: left;
+    margin-left: 40px;
+}
+.project h5{
+    float: right;
+    margin-left: 10px;
+}
+.satisfaction{
+    float: right;
+    margin-left: 40px;
+}
+.skill{
+    float: right;
+    margin-left: 40px;
+}
+.type{
+    float: left;
+    margin-left: 40px;
+}
+.type h5{
+    float: right;
+    margin-left: 10px;
+}
+i.fa.fa-thumbs-down {
+    font-size: 20px;
+    margin-left: 10px;
+}
+i.fa.fa-thumbs-up {
+    font-size: 20px;
+}
+.skills {
+    text-align: right; /* Right-align text */
+    padding: 10px; /* Add some padding */
+    color: white; /* White text color */
+    width: 80%; 
+    background-color: #2196F3;
+
+}
+.pagination{
+    float: right;
+}
+#verticle-line {
+    margin-top: 12px;
+    width: 1px;
+    min-height: 450px;
+    background: black;
+
+}
+.filter {
+    padding-top: 50px;
+}
+
+.filter_container h5 {
+    padding-bottom: 15px;
+}
+.modal{
+    padding-top: 300px;
+}
+.modal-body button {
+    font-size: 14px;
+    padding-right: 9px;
+    margin-left: 30px;
+    font-size: 14px;
+    background-color: #fab700;
+    border-color: #fab700;
+    color: white;
+}
+.modal-body p {
+    font-size: initial;
+    font-weight: 500;
+    margin-top: 10px;
+}

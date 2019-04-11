@@ -1,0 +1,37 @@
+<div class="section-top-border">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="mb-30">Company</h3>
+      <form [formGroup]="companyFormGroup">
+        <div class="mt-10">
+          <input type="text" name="company_name" placeholder="Company Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company Name'"
+            required class="single-input" formControlName="companyName">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="Year Founded" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Year Founded'"
+            required class="single-input" formControlName="yearFounded">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="No of employees" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No of employees'"
+            required class="single-input" formControlName="employees">
+        </div>
+        <div class="mt-10">
+          <input type="text" name="year_founded" placeholder="'Company Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company Address'"
+            required class="single-input" formControlName="address">
+        </div>
+        <a  class="genric-btn primary pull-right" (click)="submit()">Next</a>
+      </form>
+    </div>
+    <div class="col-md-1">
+        <div id="verticle-line"></div>
+    </div>
+
+    <div class="col-md-5">
+        <div id="rightPanel">
+            <div class="field-wrap regimage">
+                <img src="../../assets/img/company.jpg" style="width:100%;height:400px">
+            </div>
+        </div>
+    </div>
+
+  </div>

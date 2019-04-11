@@ -1,0 +1,51 @@
+.location-inputs input, .location-inputs select {
+    width: 400px;
+    color: black;
+}
+.location-inputs select{
+    float: left;
+    height: 42px;
+    border-radius: 0px;
+}
+#default-select{
+    float: left;
+    width: 36%;
+    height: 12px;
+}
+.location-inputs input{
+    float: left;
+    border: 1px solid #e2dddd;
+    border-left: 0;
+}
+.heading{
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-weight: 400;
+}
+.recent-searches h5{
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-top: 60px;
+}
+.recent-searches p {
+    padding: 0;
+    margin: 0;
+}
+.recent-searches{
+    padding-bottom: 20px;
+}
+.next-button{
+    text-align: right;
+    float: right;
+    padding-bottom: 150px;
+    padding-top: 50px;
+}
+.next-button a{
+    width: 200px;
+    font-size: 20px;
+}
+.comingup{
+    background-color: aliceblue;
+    padding: 6px;
+}

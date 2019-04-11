@@ -1,0 +1,12 @@
+<div class="whole-wrap">
+  <div class="container">
+    <app-get-hired-registration-more-page1 (skillRegisterComplete)="processSkillRegister($event)" [class.hide]="!showSkill"></app-get-hired-registration-more-page1>
+    <app-get-hired-registration-more-page-notification (notificationRegisterComplete)="processNotificationRegister($event)" [class.hide]="!showNotification"></app-get-hired-registration-more-page-notification>
+    <app-get-hired-registration-more-page-company  (companyRegisterComplete)="processCompanyRegister($event)" [class.hide]="!showCompany"></app-get-hired-registration-more-page-company>
+    <app-get-hired-registration-more-page-hireyoureason (hireReasonRegisterComplete)="processHireReasonRegister($event)" [class.hide]="!showHireReason"></app-get-hired-registration-more-page-hireyoureason>
+    <app-get-hired-registration-more-page-pricing (pricingRegisterComplete)="processPricingRegister($event)" [class.hide]="!showPricing"></app-get-hired-registration-more-page-pricing>
+    <div  class="registerEnd" *ngIf="showPricing==false && showSkill==false && showCompany==false && showHireReason==false && showNotification==false" >
+      Thank you for you information .
+    </div>
+  </div>
+</div>

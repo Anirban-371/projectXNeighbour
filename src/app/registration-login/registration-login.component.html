@@ -1,0 +1,144 @@
+<div class="form form-login">     
+    <ul class="tab-group">
+        <li class="tab" [ngClass]= "{'active': this.activatedRoute.snapshot.url[0].path == 'register'}"><a href="#signup" (click)= "routeTo('register')">Sign Up</a></li>
+        <li class="tab" [ngClass]= "{'active': this.activatedRoute.snapshot.url[0].path == 'login'}"><a href="#login" (click)= "routeTo('login')">Log In</a></li>
+    </ul> 
+    <div class="tab-content">
+        <div id="signup"  [ngClass]= "this.activatedRoute.snapshot.url[0].path == 'register' ? 'show': 'hide'">
+            <h1>Sign Up for Free</h1>
+            <div class="stepwizard">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step col-xs-6"> 
+                        <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                        <p><small>Initial Details</small></p>
+                    </div>
+                    <div class="stepwizard-step col-xs-6"> 
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p><small>Address</small></p>
+                    </div>
+                </div>
+            </div>
+            <form  [formGroup]="firstFormGroup">
+                <div class= "setup-content" id="step-1">
+                    <div class="field-wrap">
+                            <label>Name<span class="req">*</span></label>
+                            <input type="text" required autocomplete="off" formControlName="name"/>
+                            <div *ngIf="firstFormGroup.controls.name.touched && firstFormGroup.controls.name.invalid" class="invalid-feedback">
+                                <div>First Name is required</div>
+                            </div>
+                    </div>             
+                    <div class="field-wrap">
+                            <label>Email Address<span class="req">*</span></label>
+                            <input type="email" required autocomplete="off" formControlName="email"/>
+                            <div *ngIf="firstFormGroup.controls.email.touched && firstFormGroup.controls.email.invalid" class="invalid-feedback">
+                                <div>Proper Email is required</div>
+                            </div>
+                    </div>
+                    <div class="field-wrap">
+                            <label>Set A Password<span class="req">*</span></label>
+                            <input type="password" required autocomplete="off" formControlName="password"/>
+                            <div *ngIf="firstFormGroup.controls.password.touched && firstFormGroup.controls.password.invalid" class="invalid-feedback">
+                                <div>Password is required</div>
+                            </div>
+                    </div>
+                    <!-- <div class="field-wrap">
+                            <label>Confirm Password<span class="req">*</span></label>
+                            <input type="password" required autocomplete="off" formControlName="confirmpassword"/>
+                            <div *ngIf="firstFormGroup.controls.confirmpassword.touched && firstFormGroup.controls.confirmpassword.invalid" class="invalid-feedback">
+                                <div>Pass</div>
+                            </div>
+                    </div>    -->
+                    <button type="submit" class="button button-block nextBtn" (click)="formgroupValidator(firstFormGroup)">Next</button>
+                </div>
+            </form>           
+            <section >
+                <form  [formGroup]="registrationFormGroup" >
+                    <div class= "setup-content" id="step-2">
+                            <div class="field-wrap">
+                                <label>Address<span class="req">*</span></label>
+                                <input type="text" required autocomplete="off" formControlName="address"/>
+                                <div *ngIf="registrationFormGroup.controls.address.touched && registrationFormGroup.controls.address.invalid" class="invalid-feedback">
+                                    <div>Address is required</div>
+                                </div>
+                            </div>             
+                            <div class="field-wrap">
+                                <label>Pincode<span class="req">*</span></label>
+                                <input type="text" required autocomplete="off" formControlName="pincode"/>
+                                <div *ngIf="registrationFormGroup.controls.pincode.touched && registrationFormGroup.controls.pincode.invalid" class="invalid-feedback">
+                                    <div>Pincode is required</div>
+                                </div>
+                            </div>
+                            <div class="field-wrap">
+                                <label>Contact<span class="req">*</span></label>
+                                <input type="text" required autocomplete="off" formControlName="contact"/>
+                                <div *ngIf="registrationFormGroup.controls.contact.touched && registrationFormGroup.controls.contact.invalid" class="invalid-feedback">
+                                    <div>Contact is required</div>
+                                </div>
+                            </div> 
+                            <button type="submit" class="button button-block nextBtn"  (click)="formgroupValidator(registrationFormGroup); register()">Get Started</button>
+                    </div>
+                </form>
+            </section>
+            <hr/>
+            <div class="fb-login-button" 
+                data-max-rows="1" 
+                data-size="medium" 
+                data-button-type="continue_with" 
+                data-show-faces="false" 
+                data-auto-logout-link="false" 
+                data-use-continue-as="false">
+            </div>
+            <!-- <section >
+                <form  [formGroup]="buyerFormGroup" >   
+                    <div class= "setup-content" id="step-3">         
+                        <div class="field-wrap">
+                            <label>Address<span class="req">*</span></label>
+                            <input type="text" required autocomplete="off" formControlName="address"/>
+                            <div *ngIf="buyerFormGroup.controls.address.touched && buyerFormGroup.controls.address.invalid" class="invalid-feedback">
+                                <div>Address is required</div>
+                            </div>
+                        </div>             
+                        <div class="field-wrap">
+                            <label>Pincode<span class="req">*</span></label>
+                            <input type="text" required autocomplete="off" formControlName="pincode"/>
+                            <div *ngIf="buyerFormGroup.controls.pincode.touched && buyerFormGroup.controls.pincode.invalid" class="invalid-feedback">
+                                <div>Pincode is required</div>
+                            </div>
+                        </div>
+                        <div class="field-wrap">
+                            <label>Contact<span class="req">*</span></label>
+                            <input type="text" required autocomplete="off" formControlName="contact"/>
+                            <div *ngIf="buyerFormGroup.controls.contact.touched && buyerFormGroup.controls.contact.invalid" class="invalid-feedback">
+                                <div>Contact is required</div>
+                            </div>
+                        </div> 
+                        <button type="submit" class="button button-block nextBtn"  (click)="formgroupValidator(buyerFormGroup); register()">Get Started</button>
+                    </div>
+                </form>
+            </section>-->
+        </div>
+        <div id="login" [ngClass]= "this.activatedRoute.snapshot.url[0].path == 'login' ? 'show': 'hide'">   
+            <h1>Welcome Back!</h1>
+            <form [formGroup]="formLogin">
+                <div class="field-wrap">
+                    <label>Email Address<span class="req">*</span></label>
+                    <input type="email"required autocomplete="off" formControlName="emailFormControl"/>
+                </div>
+                <div class="field-wrap">
+                    <label>Password<span class="req">*</span></label>
+                    <input type="password"required autocomplete="off" formControlName="passwordFormControl"/>
+                </div>
+                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                <button class="button button-block"  (click)="login()" >Log In</button>
+            </form>
+            <div class="fb-login-button" 
+                data-max-rows="1" 
+                data-size="medium" 
+                data-button-type="continue_with" 
+                data-show-faces="false" 
+                data-auto-logout-link="false" 
+                data-use-continue-as="false">
+            </div>
+        </div> 
+    </div><!-- tab-content -->
+</div>

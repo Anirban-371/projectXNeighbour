@@ -1,0 +1,24 @@
+<!-- Search -->
+<div class="header-search">
+
+  <form>
+      <!-- [(ngModel)]="address" (setAddress)="getAddressOnChange($event,LocationCtrl)" -->
+    <input class=" location-query input location-input pull-left" type="text" placeholder="Location" name="Location" #search>
+    <button class="location-btn">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+    </button>
+    <!-- $event.target.value.length > 3 && -->
+    <!-- (input)="searchData($event)" (keydown)="searchData($event)" -->
+    <input class=" search-query input search-input pull-right" type="text" placeholder="What service you are looking for?" (input)="searchData($event)" (keydown)="searchData($event)" name="searchQuery" [(ngModel)]="searchQuery">
+    <button class="search-btn">
+      <i class="fa fa-search"></i>
+    </button>
+    
+    <div *ngIf="filteredService">
+      <ul class="product_dropdown" >
+        <li *ngFor="let service of filteredService; let k = index" (click)="gotoDetailsPage(service)" >{{service.name}}</li>
+      </ul>
+    </div>
+  </form>
+</div>
+<!-- /Search -->

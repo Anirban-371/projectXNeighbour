@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <h3>Profile </h3>
+      <div class="col-md-12 heading" >
+        Services
+      </div>
+      <div class="col-md-2">
+        <label>Add Service</label>
+      </div>
+      <div class="col-md-6">
+        <div class="">
+            <input type="text" name="service" [(ngModel)]="service" placeholder="Add Service" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Add Service'" required class="single-input">
+        </div>
+      </div>
+      <div class="col-md-4">
+          <a  class="genric-btn primary" (click)="addService()">ADD</a>
+      </div>
+      <div class="col-md-12">
+          <label>Service :</label>
+      </div>
+      <div class="col-md-12">
+          <div class="col-md-12" class="service">
+              <ul>
+                <li *ngFor="let service of services">{{service}}</li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-md-12 heading">
+      Registration
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <p>Question:</p>
+      <a href="#" class="genric-btn primary add">+</a>
+
+    </div>
+  </div>
+</div>

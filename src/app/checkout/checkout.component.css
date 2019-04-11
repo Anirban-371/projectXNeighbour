@@ -1,0 +1,9 @@
+#checkout-form{
+    width: 100%;
+}
+.input{
+    width: 100%;
+}
+.sub-total, .total{
+    text-align: -webkit-right;
+}

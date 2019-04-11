@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-6">
+    <p class="heading">Tell us where you want to get the service</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 location-inputs">
+    <div class="form-select" id="default-select" name="address" >
+      <select (change)="getlocation($event)">
+        <option disabled [selected]='true'>Select City</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+      </select>
+    </div>
+    <input type="text" name="address" placeholder="Locality" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Locality'"
+      required class="single-input" #search>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 recent-searches">
+    <h5>Recent Searches</h5>
+    <p>Bakers Street</p>
+    <p>Lincoln Road</p>
+  </div>
+</div>
+<p class="comingup">Need immediate service? Coming Up.</p>
+<div class="row next-button">
+  <a href="javascript:void(0)" class="genric-btn success" (click)="next()">NEXT</a>
+</div>

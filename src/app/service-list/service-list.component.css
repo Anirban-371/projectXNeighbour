@@ -1,0 +1,21 @@
+.single-cat ul li{
+    text-align: initial;
+    margin-bottom: 10px;
+}
+.single-cat ul{
+   margin-left: 60px;
+}
+.single-cat ul li a{
+    color: #21a5d0;
+    font-size: 16px;
+}
+.single-cat ul li a span i{
+    font-size: larger;
+    margin-right: 30px;
+    color: #544b4b;
+}
+.mb-20{
+    margin-top: 23px;
+    color: #fab700;
+    
+}

@@ -1,0 +1,40 @@
+
+<!-- Start home-about Area -->
+<section class="home-about-area section-gap" id="about">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8 col-md-12 home-about-left">
+          <h6>Puntuality . Availability . Security . </h6>
+          <h1>
+            We’ve are here to make your life: <br>
+            Better & Comfortable. 
+          </h1>
+          <p class="sub">Our experts are here to listen to you and give you an Approximate Cost and Post Completion Design.</p>
+          <p class="pb-20">
+            We expertise in understanding your requirement and connecting to you the perfect person for your job . We give your security on your products . We value your time, so Puntuality is our Priority and above all, we always want to be on your speed dail . So relax, we are here to help your out and complete the project even before you know it .
+          </p>
+          <a href="#" [routerLink]="['/getEstimation']" class="primary-btn header-btn text-uppercase">Get Estimate</a>
+        </div>
+        <div class="col-lg-4 col-md-12 home-about-right relative">
+          <form #quoteForm="ngForm" class="form-wrap" (ngSubmit)="onSubmit(quoteForm)">
+            <h4 class="text-white pb-20">Request a Quote</h4>
+            <div class="form-select" id="service-select">
+              <select name= "service" ngModel>
+                <option [selected] = "selected">Select Service</option>
+                <option value="1">Plumbing</option>
+                <option value="2">Housing</option>
+                <option value="3">Electic</option>
+                <option value="4">Others</option>
+              </select>
+            </div>								
+            <input type="text" class="form-control" placeholder="Name" name="name" ngModel>
+            <input type="phone" class="form-control" placeholder="Phone Number" name="contactNumber" ngModel>
+            <input type="email" class="form-control" placeholder="Email Address" name="email" ngModel>
+            <textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="form-control" name="message" ngModel></textarea>
+            <button type="submit" class="primary-btn">Request Free Quote</button>
+          </form>
+        </div>
+      </div>
+    </div>	
+    </section>
+    <!-- End home-about Area -->

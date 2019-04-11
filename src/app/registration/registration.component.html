@@ -1,0 +1,259 @@
+<div class="container">
+  <div class="row">
+      <div class="wizard">
+        <form  [formGroup]="zipcodeForm" >
+        <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="zipcode">Zip Code</label>
+                                <input 
+                                    type="text" 
+                                    autocomplete="off" 
+                                    formControlName="zipcode" 
+                                    class="form-control" 
+                                    id="zipcode" 
+                                    placeholder="Location of your Project"
+                                    (input)="getCityFromZipcode($event)" 
+                                    (keydown)="getCityFromZipcode($event)"
+                                >
+                                <p class="error" [class.hide] = "zipCodeError == false" > Please enter the zipcode</p>
+                                <p class="error" [class.hide] = "incorrectPincode == false"> Please correct zipcode</p>
+                            </div>
+                            <div class="col-md-12 location">
+                                {{city}} {{state}}
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="genric-btn success" (click)="zipCodeSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="projectTypeForm" [ngClass] ="projectType ? 'show' :'hide'">
+        <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="zipcode">Type of Project</label>
+                                <select formControlName="projectType" class="form-control" id="projectType">
+                                    <option disabled [selected]='true' >Select Project Type</option>
+                                    <option value="old">Upgrade existing space</option>
+                                    <option value="new">Install in new addition</option>
+                                </select>
+                                <p class="error" [class.hide] = "projectTypeError == false" > Please select a Project Type</p>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="genric-btn success" (click)="projectTypeSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="areaCateoriesForm" [ngClass] ="areaCateories ? 'show' :'hide'" >
+        <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="areachecks">Areas for the Project</label><br>
+                                <div id="areachecks">
+                                    <input class=""  type="checkbox" id="primary-switch" name="area1" value="bathroom"  (change)="change($event, 'bathroom')">Bathroom<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area2" value="living"    (change)="change($event, 'living')">Living, Family, or Dining rooms<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area3" value="bedroom"   (change)="change($event, 'bedroom')">Bedroom(s)<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area4" value="laundry"   (change)="change($event, 'laundry')">Laundry or utility room<br>
+                                    <input class="" type="checkbox" id="primary-switch"  name="area5" value="garage"    (change)="change($event, 'garage')">Garage or Basement<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area6" value="office"    (change)="change($event, 'office')">Office<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area7" value="kitchen"   (change)="change($event, 'kitchen')">Kitchen<br>
+                                    <input class=""  type="checkbox" id="primary-switch" name="area8" value="outdoor"   (change)="change($event, 'outdoor')">Patio or outdoors<br>
+                                </div>
+                                <p class="error" [class.hide] = "projectAreaError == false" > Please select a Project Area</p>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button"  class="genric-btn success" (click)="areaChecksSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="fixtureCateoriesForm" [ngClass] ="fixtureCateories ? 'show' :'hide'">
+            <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="fixturechecks">Fixtures to be installed</label><br>
+                                <div id="fixturechecks">
+                                    <input class="" type="checkbox" name="area1" value="a1" (change)="change($event, 'dc')">Deep Cleaning<br>
+                                    <input class="" type="checkbox" name="area2" value="a2" (change)="change($event, 'sc')">Shallow Cleaning<br>
+                                    <input class="" type="checkbox" name="area3" value="a3" (change)="change($event, 'ii1')">New internal installation<br>
+                                    <input class="" type="checkbox" name="area4" value="a4" (change)="change($event, 'ii2')">New internal installation<br>
+                                    <input class="" type="checkbox" name="area5" value="a5" (change)="change($event, 'irf')">Internal Repair and Fix<br>
+                                    <input class="" type="checkbox" name="area6" value="a6" (change)="change($event, 'erf')">External Repair and Fix<br>
+                                    <input class="" type="checkbox" name="area7" value="a7" (change)="change($event, 'replc')">Replacement<br>
+                                    <input class="" type="checkbox" name="area8" value="a8" (change)="change($event, 'of')">Other fixtures<br>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="btn btn-primary next-step" (click)="fixtureChecksSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="installationCateoriesForm" [ngClass] ="installationCateories ? 'show' :'hide'">
+            <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="installationchecks">Appliances to be installed</label><br>
+                                <div id="installationchecks">
+                                    <input class="" type="checkbox" name="area1" value="a1" formControlName="area1">Dishwasher<br>
+                                    <input class="" type="checkbox" name="area2" value="a2" formControlName="area2">Garbage disposal<br>
+                                    <input class="" type="checkbox" name="area3" value="a3" formControlName="area3">Washing machine<br>
+                                    <input class="" type="checkbox" name="area4" value="a4" formControlName="area4">Ice maker<br>
+                                    <input class="" type="checkbox" name="area5" value="a5" formControlName="area5">Water heater<br>
+                                    <input class="" type="checkbox" name="area6" value="a6" formControlName="area6">Gas cooktop/oven/range<br>
+                                    <input class="" type="checkbox" name="area7" value="a7" formControlName="area7">None (Rough-in)<br>
+                                    <input class="" type="checkbox" name="area8" value="a8" formControlName="area8">Other appliances<br>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="btn btn-primary next-step"  (click)="installationChecksSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="wallaccessForm" [ngClass] ="wallaccess ? 'show' :'hide'" >
+            <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="accessType">Describe Wall Access</label>
+                                <select formControlName="accessType" class="form-control" id="accessType">
+                                    <option [selected]='true' disabled>Select Access Type</option>
+                                    <option>All walls will be exposed</option>
+                                    <option>Partial wall access</option>
+                                    <option>Walls must be left intact</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="btn btn-primary next-step" (click)="accessTypeSave();">Save and continue</button></li>
+                        </ul>
+                    </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="timeForm" [ngClass] ="timeCheck ? 'show' :'hide'" >
+            <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="time">When do you need the service?</label>
+                                <select formControlName="time" class="form-control" id="time">
+                                    <option [selected]='true' disabled>Select Timing</option>
+                                    <option>Today Anytime</option>
+                                    <option>Tomorrow</option>
+                                    <option>In 3 days</option>
+                                    <option>In 7 days</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="btn btn-primary next-step" (click)="timeFix();" >Save and continue</button></li>
+                        </ul>
+                        </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+        <form  [formGroup]="gasAccessForm" [ngClass] ="gasAccess ? 'show' :'hide'" >
+            <!--part 1-->
+            <div class="tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="step1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="gasAvailability">If installing gas appliances, is there existing gas piping into the home?</label>
+                                <select formControlName="gasAvailability" class="form-control" id="gasAvailability">
+                                    <option [selected]='true' disabled>Select Gas Availability</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                    <option>Dont Know</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-inline center">
+                            <li><button type="button" class="btn btn-primary next-step" (click)="gasAvailabilitySave();" >Save and continue</button></li>
+                        </ul>
+                        </div>
+                <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+       
+        <form  [formGroup]="registrationFormGroup" [ngClass] ="registrationForm ? 'show' :'hide'">
+            <!--part 1-->
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <div class="step1">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="firstName">First Name</label>
+                                        <input type="firstName" class="form-control" id="firstName" placeholder="First Name" formControlName="firstName">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" formControlName="lastName">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="contactNumber">Contact Number</label>
+                                        <input type="contactNumber" class="form-control" id="contactNumber" placeholder="Contact Number" formControlName="contactNumber">
+                                    </div>
+                                </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-primary next-step"  (click)="getEstimates();" >Get Estimates</button></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+            <div class="loader" *ngIf="estimate"></div>
+        </div>
+ </div>
+</div>

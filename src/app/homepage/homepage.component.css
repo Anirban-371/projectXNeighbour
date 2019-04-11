@@ -1,0 +1,121 @@
+/* .search-bar{
+	top: -167px;
+} */
+
+.banner-area .primary-btn {
+    font-size: large;
+    font-weight: 800;
+}
+.banner-content p{
+    font-size: large;
+}
+
+@media (max-width: 1366px) {
+    .banner-content h6 {
+        margin-top: 88px;
+    }
+    .search-bar[_ngcontent-c3] {
+        top: 55px;
+    }
+    .banner-area{
+        height: 575px
+    }
+    .banner-content h1 {
+        margin-top: 30px;
+    }
+    .banner-content p {
+        margin-top: 30px;
+    }
+    .banner-content a {
+        margin-top: 30px;
+    }
+}
+@media (min-width: 1367px) {
+    .banner-content h6 {
+        margin-top: 98px;
+    }
+    .search-bar[_ngcontent-c3] {
+        top: 65px;
+    }
+    .banner-area{
+        height: 710px
+    }
+    .banner-content h1 {
+        margin-top: 40px;
+    }
+    .banner-content p {
+        margin-top: 40px;
+    }
+    .banner-content a {
+        margin-top: 40px;
+    }
+}
+#backred{
+    background-color: red;
+    padding: 5px;
+    margin: 5px;
+}
+#backyellow{
+    background-color: yellow;
+    padding: 5px;
+    margin: 5px;
+}
+#backblue{
+    background-color: blue;
+    padding: 5px;
+    margin: 5px;
+}
+#backgreen{
+    background-color: green;
+    padding: 5px;
+    margin: 5px;
+}
+#backorange{
+    background-color: orange;
+    padding: 5px;
+    margin: 5px;
+}
+
+.card-text{
+    font-size: 20px;
+}
+.card-title{
+    font-size: 20px;
+}
+.card-body{
+    text-align: center;
+}
+#otherHeading{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 60px;
+    margin-bottom: 20px;
+
+}
+.project-area .row p{
+    margin-left: 60px;
+    font-size: 16px;
+}
+.project-area .row p span{
+    margin-right: 20px;
+    color:  #fab700;
+    font-weight: 600;
+}
+/* .search-bar{
+    margin-top: 34px;
+} */
+a.header-btn {
+    width: 186px;
+}
+@media only screen and (max-width: 400px)  {
+    .banner-content  a{
+        display: block;
+        left: 86px;
+    }
+    .text-white{
+        display: none
+    }
+    .banner-area{
+        height: 746px;
+    }
+}
